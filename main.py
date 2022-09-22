@@ -1,7 +1,9 @@
 import os
 import logging
-from reports import scrape_reports
+from reports import *
 
 
 if __name__ == "__main__":
-    scrape_reports()
+    audit_reports = scrape_reports()
+    risks = parse_audit_reports(audit_reports)
+    
