@@ -1,0 +1,4 @@
+bs4>=0.0.1
+pandas>=1.4.3
+python-dotenv>=0.20.0
+requests>=2.26.0
