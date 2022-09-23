@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# json files
+*.json
+# /*.json - only for json files in root
+!package*.json
+!launch.json
+!settings.json

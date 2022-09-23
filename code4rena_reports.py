@@ -3,6 +3,8 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from definitions import *
+from log_cfg import *
+log = logging.getLogger(__name__)
 
 def scrape_reports() -> list:
     try:
@@ -25,12 +27,15 @@ def scrape_reports() -> list:
             })
         return audit_reports
     except Exception as e:
-        logging.exception('Error running reports scraper')
+        log.exception('Error running reports scraper')
         return []
 
 def parse_audit_reports(audit_reports:list) -> None:
     try:
-        for report in audit_reports:
+        temp_histogram = {}
+        findings = findings_template.copy() # init 
+        for idx, report in enumerate(audit_reports):
+            log.info('%s/%s: Fetching %s', idx+1, len(audit_reports), report['project'])
             reports_page = requests.get(report['link'])
             if reports_page.status_code != 200:
                 raise Exception(f"Error fetching page: {reports_page.status_code}")
@@ -38,7 +43,12 @@ def parse_audit_reports(audit_reports:list) -> None:
             soup = BeautifulSoup(page, "html.parser")
             contents_main_div = soup.find("div", {"class": "report-toc"})
             links_in_page = [(li.string, report['link'] + li['href']) for li in contents_main_div.find_all('a', href=True)]
+            for lip in links_in_page:
+                # TODO: consider using regex in the future?
+                # if lip[0].startswith('H-'):
+                1==1
             1==1
+        1==1
     except Exception as e:
-        logging.exception('Error running reports parser')
+        log.exception('Error running reports parser')
         return []

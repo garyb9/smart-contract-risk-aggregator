@@ -19,7 +19,16 @@
 - [Code4rena Reports](https://code4rena.com)
 
 ## Installation guide
-TBD
+Python 3.8 and above is required
+
+```python
+pip install -r requirements.txt
+```
 
 ## Usage guide
 TBD
+
+
+## Inspirations and Useful links
+This repo was inspired by these awesome repo's:
+- [Code4rena Scraper](https://github.com/Krow10/code4rena-scraper)

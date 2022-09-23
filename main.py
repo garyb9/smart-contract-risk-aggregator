@@ -1,7 +1,6 @@
 import os
 import logging
-from reports import *
-
+from code4rena_reports import *
 
 if __name__ == "__main__":
     audit_reports = scrape_reports()
