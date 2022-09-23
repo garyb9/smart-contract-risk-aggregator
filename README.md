@@ -1,6 +1,6 @@
 <div align="center">
   <h1 align="center">Smart Contract Security Risk Reports Aggregator</h1>
-  <p align="center">The goal of this repository is to be an aggregator of smart contract security risk reports found across the web.</p>  
+  <p align="center">The goal of this repository is to be an aggregator of smart contract security risk reports and vulnerabilities found across the web.</p>  
 </div>
 
 ## Sources
