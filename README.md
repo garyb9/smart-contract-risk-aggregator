@@ -1,4 +1,4 @@
-# risk-reports-scraper
+# risk-reports-aggregator
 
 The goal of this repository is to be an aggregator of smart contract security risk reports found across the web.
 
