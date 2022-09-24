@@ -10,7 +10,7 @@
             "request": "launch",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "program": "${workspaceFolder}/main.py"
+            "program": "${workspaceFolder}/code4rena_reports.py"
         }
     ]
 }
